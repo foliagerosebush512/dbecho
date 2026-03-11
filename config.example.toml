@@ -1,0 +1,12 @@
+[databases.myapp]
+url = "postgres://localhost:5432/myapp"
+description = "Main application"
+
+# Environment variables are supported with ${VAR} syntax:
+# [databases.production]
+# url = "${DATABASE_URL}"
+# description = "Production database"
+
+[settings]
+row_limit = 500
+query_timeout = 30
