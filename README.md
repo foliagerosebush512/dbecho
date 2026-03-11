@@ -46,6 +46,46 @@ What makes it different from just giving an agent a connection string:
 - **Agent-optimized output.** Schema, stats, and query results are formatted so LLMs parse them efficiently, not as raw psql dumps.
 - **Zero infrastructure.** No containers, no web UI, no background processes. A Python package that speaks MCP over stdio.
 
+## Example session
+
+```
+You: Show me what's in the database
+
+Claude: [calls list_databases → schema → summary]
+
+       Database: ecommerce (12 tables, 847 MB)
+       Largest: orders (2.1M rows), products (45K rows), users (128K rows)
+
+You: How are sales trending this quarter?
+
+Claude: [calls trend on orders table, grouped by week]
+
+       Week        | orders | total_revenue
+       2026-01-06  | 3,241  | $482,100
+       2026-01-13  | 3,892  | $571,340
+       2026-01-20  | 2,107  | $298,500  ← 46% drop
+       ...
+       Significant drop in week of Jan 20. Let me check what happened.
+
+       [calls query to investigate, then anomalies on orders table]
+
+       Found: 89% of orders that week have status='cancelled'.
+       The cancellation spike correlates with a payment gateway outage
+       (payments table shows 0 successful transactions Jan 19-21).
+
+You: Any data quality issues I should worry about?
+
+Claude: [calls anomalies on each table]
+
+       Found 4 issues:
+       - users.email: 342 possible duplicates
+       - orders.shipped_at: 127 dates in the future
+       - products.price: 23 outliers (IQR: $5..$89, found items at $0 and $9,999)
+       - events.user_id: 94.2% NULL (missing user attribution)
+```
+
+One conversation, zero context switches. The agent picks the right tools automatically.
+
 ## Quick start
 
 ### 1. Install
