@@ -1,5 +1,9 @@
 # dbecho
 
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![MCPAmpel](https://img.shields.io/endpoint?url=https://mcpampel.com/badge/ginkida/dbecho.json)](https://mcpampel.com/repo/ginkida/dbecho)
+
 <p align="center">
   <img src="https://minio.ginkida.dev/minion/github/dbecho.png" alt="dbecho mascot" width="400" height="400">
 </p>
