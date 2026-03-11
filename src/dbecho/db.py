@@ -132,7 +132,9 @@ class DatabaseManager:
             raise TimeoutError("Operation exceeded query timeout")
         return max(1, math.ceil(remaining * 1000))
 
-    def _execute(self, cur, query, params=None, *, deadline: float | None = None) -> None:
+    def _execute(
+        self, cur, query, params=None, *, deadline: float | None = None
+    ) -> None:
         if deadline is not None:
             timeout_ms = self._remaining_timeout_ms(deadline)
             cur.execute(
@@ -418,7 +420,9 @@ class DatabaseManager:
 
                     self._execute(
                         cur,
-                        SQL("SELECT COUNT(*) FROM {} WHERE {} IS NULL").format(tbl, col),
+                        SQL("SELECT COUNT(*) FROM {} WHERE {} IS NULL").format(
+                            tbl, col
+                        ),
                         deadline=deadline,
                     )
                     null_count = cur.fetchone()[0]
@@ -452,7 +456,9 @@ class DatabaseManager:
                     elif data_type in TEMPORAL_TYPES:
                         self._execute(
                             cur,
-                            SQL("SELECT MIN({}), MAX({}) FROM {}").format(col, col, tbl),
+                            SQL("SELECT MIN({}), MAX({}) FROM {}").format(
+                                col, col, tbl
+                            ),
                             deadline=deadline,
                         )
                         min_val, max_val = cur.fetchone()
@@ -634,7 +640,9 @@ class DatabaseManager:
                     # High null rate
                     self._execute(
                         cur,
-                        SQL("SELECT COUNT(*) FROM {} WHERE {} IS NULL").format(tbl, col),
+                        SQL("SELECT COUNT(*) FROM {} WHERE {} IS NULL").format(
+                            tbl, col
+                        ),
                         deadline=deadline,
                     )
                     null_count = cur.fetchone()[0]
